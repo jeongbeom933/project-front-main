@@ -14,7 +14,12 @@ const CommunityMain = () => {
       <Outlet/> {/*팝업 게시물 자리*/}
 
       <Container>
-        <CommunityHeader/>
+        <CommunityHeader
+          // 커뮤니티는 기본값 그대로: title/placeholder/sortOptions
+          onSearch={({ keyword, sort }) => {
+            console.log("커뮤니티 검색", { keyword, sort });
+          }}
+        />
       </Container>
 
       <FullDivider />  
