@@ -100,7 +100,9 @@ export const SearchIcon = styled.img`
 // 필터 버튼
 export const FilterButton = styled.button`
   height: 40px;
-  width: 106px;
+  width: 130px;
+  padding: 0 10px;   
+  white-space: nowrap;   /* 줄바꿈 방지 */
 
   ${flexCenter}
   gap: 6px;
@@ -134,9 +136,10 @@ export const DropdownMenu = styled.div`
   position: absolute;
   top: 46px;
   right: 0;
-
-  width: 115px;
-  height: 79px;
+  
+  min-width: 150px;  
+  width: max-content; /* 내용에 맞게 늘어나게 */
+  padding: 6px;
 
   background: ${({ theme }) => theme.PALLETE.background.white};
   border: 1px solid ${({ theme }) => theme.PALLETE.gray[300]};
@@ -147,18 +150,20 @@ export const DropdownMenu = styled.div`
   gap: 4px;
 
   z-index: 50;
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.04); /* 쉐도우 고민 중.. */
+
 `
 
 // 드랍다운 항목 
 export const DropdownItem = styled.button`
   width: 100%;
-  height: 32px;
+  height: 36px;
 
   ${flexCenter}
   justify-content: flex-start;
   
-  padding-top: 10px;
-  padding-left: 14px;
+  padding: 0 14px;
+  white-space: nowrap;    /* 줄바꿈 금지 */
 
   border: none;
   background: transparent;
